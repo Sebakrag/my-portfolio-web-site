@@ -1,0 +1,4 @@
+Features to include in my portfolio website:
+- Contact mail-box from which the user can send an mail to me.
+- Theme toggle
+- Simple game? just to have fun

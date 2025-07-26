@@ -1,0 +1,126 @@
+
+/* 
+Colors used in this project:
+- #fcf8ee: Gold background color
+- #113738: Dark blue color for text and borders.
+- rgb(71, 69, 67): Dark gray color for text and borders.
+- greenyellow.
+*/
+
+/* This is a reset o normalization of the styles */
+* {
+    margin: 0;
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+}
+
+/* Every declaration made for the <html> element it's a global declaration */
+html {
+  background-color: #fcf8ee;  /* #113738 */
+  color: #113738;
+  /* color: rgb(71, 69, 67); */
+}
+
+.nav-bar {
+  display: block;
+  margin: 0 auto;          /* Centra la barra de navegación */
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;             /* Opcional: si querés que quede fija arriba */
+  top: 0;
+  left: 0;
+  z-index: 1000;               /* Se asegura de estar por encima de otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.nav-bar:hover {
+  background-color: #fcf8ee; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #113738;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1rem;
+  border-right: solid 1px #113738;
+  border-left: solid 1px #113738;
+  padding: 3px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.4s ease, background-color 0.4s ease;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  color: #fcf8ee;
+  background-color: #113738;
+}
+
+.ref-link:visited {
+  color: orange;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0px 20px 20px 20px;
+}
+
+.container {
+  margin-top: 3%;
+}
+
+h1 {
+  /* font-family: 'Anonymous Pro', sans-serif; */
+  font-size: 48px;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 0px 0px 20px black;
+  /* text-shadow: 10px 4px 20px black; */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+section {
+  margin: 10px 0;
+  padding: 20px;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 20px;
+}
+
+article {
+  padding: 0px 20%;
+  text-align: justify;
+}
+
+p, li {
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  line-height: 2; /* Adjust the interline spacing */
+  letter-spacing: 1px;
+}
+
+footer {
+  /* background-color: #113738; */
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: right;
+  padding: 10px 10px;
+  position: relative; /* Allows footer to be positioned at the bottom */
+  bottom: 0;
+  left: 0;
+  /* border-top-color: dimgrey;
+  border-top-width: 1px;
+  border-top-style: solid; */
+  width: 100%;
+  font-size: 0.9em;
+  border-radius: 20px;
+}
