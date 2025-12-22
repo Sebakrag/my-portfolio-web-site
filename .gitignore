@@ -1,2 +1,6 @@
-zip-dir
-using-web-storage
+# Directories
+zip-dir/
+code-examples/
+
+# Files
+features.txt
