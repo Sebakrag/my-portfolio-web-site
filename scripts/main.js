@@ -39,29 +39,3 @@ function main() {
 }
 
 main();
-
-
-
-
-function isBigInt(value) {
-    return typeof value === "bigint";
-}
-
-function analyzeBigInt(value) {
-    if (isBigInt(value)) {
-        console.log("¡" + value + " es un BigInt!");
-    } else {
-        console.log("¡" + value + " NO es un BigInt!");
-    }
-}
-
-function setUserName() {
-    // let userName = prompt("Please, insert your name.");
-    if (!userName || userName === null) {
-        setUserName();
-    } else {
-        localStorage.setItem("name", userName);
-        myHeading.textContent = "Hi, " + userName;
-        // myHeading.innerHTML = "Hi, " + userName;
-    }
-}
