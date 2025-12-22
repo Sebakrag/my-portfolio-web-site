@@ -13,12 +13,52 @@ Colors used in this project:
     /* box-sizing: border-box; */
 }
 
+:root {
+  --bg-color: #fcf8ee;
+  --text-color: #113738;
+
+  --link-color: #113738;
+  --link-visited-color: #aa9f8e;
+  --link-hover-color: #113738;
+
+  --header-bg-color: #fcf8ee;
+  --header-button-text: #113738;
+  --header-button-bg-hover: #113738;
+  --header-button-text-hover: #fcf8ee;
+  --border-color: #113738;
+  --theme-toggle-bg-hover: #113738;
+}
+
+[data-theme="dark"] {
+  --bg-color: #113738;
+  --text-color: #fcf8ee;
+
+  --link-color: #ffd27d;
+  --link-visited-color: #cfc6b8;
+  --link-hover-color: #ffffff;
+
+  --header-bg-color: #113738;
+  --header-button-text: #fcf8ee;
+  --header-button-bg-hover: #fcf8ee;
+  --header-button-text-hover: #113738;
+  --border-color: #fcf8ee;
+  --theme-toggle-bg-hover: #fcf8ee;
+}
+
 /* Every declaration made for the <html> element it's a global declaration */
 html {
-  background-color: #fcf8ee;  /* #113738 */
-  color: #113738;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   /* color: rgb(71, 69, 67); */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Every declaration made for the <html> element it's a global declaration */
+/* html {
+  background-color: #fcf8ee;
+  color: #113738;
+  
+} */
 
 body {
   width: 80%;
@@ -43,7 +83,7 @@ body > header {
 }
 
 body > header:hover {
-  background-color: #fcf8ee; /* Cambia el color de fondo al pasar el mouse */
+  background-color: var(--header-bg-color); /* Cambia el color de fondo al pasar el mouse */
 }
 
 .logo {
@@ -73,27 +113,28 @@ body > header:hover {
 .header-button {
   background: none;
   border: none;
-  color: #113738;
+  color: var(--header-button-text);
   /* font-family: 'Anonymous Pro', monospace; */
   font-family: 'Merriweather', serif;
   font-size: 1rem;
   padding: 5px 10px;
   border-radius: 5px;
-  border-right: solid 1px #113738;
-  border-left: solid 1px #113738;
+  border-right: solid 1px var(--border-color);
+  border-left: solid 1px var(--border-color);
   cursor: pointer;
   text-decoration: none;
   transition: color 0.4s ease, background-color 0.4s ease;
 }
 
 .header-button:hover {
-  color: #fcf8ee;
-  background-color: #113738;
+  color: var(--header-button-text-hover);
+  background-color: var(--header-button-bg-hover);
 }
 
 /* Theme toggle button */
 #theme-toggle {
   display: flex;
+  color: var(--header-button-text);
   align-items: center;
   justify-content: center;
   padding: 6px;
@@ -105,7 +146,8 @@ body > header:hover {
 }
 
 #theme-toggle:hover {
-  background-color: #113738;
+  background-color: var(--theme-toggle-bg-hover);
+  color: var(--header-button-text-hover);
 }
 
 
@@ -114,17 +156,17 @@ main {
 }
 
 a.ref-link:link {
-  color: orange;
+  color: var(--link-color);
   /* color: #113738; */
 }
 
 a.ref-link:visited {
-  color: #113738;
+  color: var(--link-visited-color);
   /* color: orange; */
 }
 
 a.ref-link:hover {
-  color: #113738;
+  color: var(--link-hover-color);
   text-decoration: none;
 }
 
